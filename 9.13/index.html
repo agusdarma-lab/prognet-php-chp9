@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercise 13 - Favorite Popular Songs Survey (Anisong)</title>
+  </head>
+  <body>
+    <h2>Favorite Popular Songs Survey (Anisong Edition)</h2>
+    <p>
+      <em
+        >Share your favorite anime / popular song, composer, and artist or
+        group!</em
+      >
+    </p>
+    <form action="save_song.php" method="post">
+      <p>
+        <label for="song_name">Song Name:</label><br />
+        <input
+          type="text"
+          id="song_name"
+          name="song_name"
+          placeholder="e.g., Idol / Gurenge / Unravel"
+          required
+        />
+      </p>
+      <p>
+        <label for="composer">Composer:</label><br />
+        <input
+          type="text"
+          id="composer"
+          name="composer"
+          placeholder="e.g., Ayase / Kayoko Kusano / TK"
+          required
+        />
+      </p>
+      <p>
+        <label for="artist">Performing Artist or Group:</label><br />
+        <input
+          type="text"
+          id="artist"
+          name="artist"
+          placeholder="e.g., YOASOBI / LiSA / TK from Ling tosite sigure"
+          required
+        />
+      </p>
+      <p>
+        <button type="submit">Submit Favorite Song</button>
+        <button
+          type="submit"
+          formaction="view_results.php"
+          formmethod="get"
+          formnovalidate
+        >
+          View Survey Results
+        </button>
+      </p>
+    </form>
+    <br /><br /><br />
+
+    <a href="../../">Kembali ke Halaman Utama</a>
+  </body>
+</html>
