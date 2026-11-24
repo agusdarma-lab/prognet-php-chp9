@@ -1,39 +1,16 @@
-
 <?php
-
-// Function to get unique strings from an array
-function uniqueStrings($array) {
-    $unique = [];
-
-    foreach ($array as $value) {
-        if (!in_array($value, $unique, true)) {
-            $unique[] = $value;
+function uniqueStrings($arr) {
+    $hasil = [];
+    foreach ($arr as $s) {
+        if (!in_array($s, $hasil)) {
+            $hasil[] = $s;
         }
     }
-
-    return $unique;
+    return $hasil;
 }
 
-// Test data
-$fruits = [
-    "Apple",
-    "Orange",
-    "Mango",
-    "Apple",
-    "Banana",
-    "Orange"
-];
-
-// Call function
-$result = uniqueStrings($fruits);
-
-// Display output
-echo "Exercise 9.1 - Unique Strings\n\n";
-
-echo "Original Array:\n";
-print_r($fruits);
-
-echo "\nUnique Strings:\n";
-print_r($result);
-
+$data = ["apel", "jeruk", "apel", "mangga", "jeruk", "pisang"];
+print "Input : " . implode(", ", $data) . "<br>";
+print "Unik  : " . implode(", ", uniqueStrings($data));
 ?>
+
