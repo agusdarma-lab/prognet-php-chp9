@@ -1,1 +1,18 @@
-d:\TEKNOLOGI INFORMASI RAVEINA\SEMESTER 3\PEMROGRAMAN INTERNET\TUGAS_PROGNET\exercise_9_1.php d:\TEKNOLOGI INFORMASI RAVEINA\SEMESTER 3\PEMROGRAMAN INTERNET\TUGAS_PROGNET\exercise_9_2.php d:\TEKNOLOGI INFORMASI RAVEINA\SEMESTER 3\PEMROGRAMAN INTERNET\TUGAS_PROGNET\exercise_9_3.php d:\TEKNOLOGI INFORMASI RAVEINA\SEMESTER 3\PEMROGRAMAN INTERNET\TUGAS_PROGNET\exercise_9_4.php d:\TEKNOLOGI INFORMASI RAVEINA\SEMESTER 3\PEMROGRAMAN INTERNET\TUGAS_PROGNET\exercise_9_5.php d:\TEKNOLOGI INFORMASI RAVEINA\SEMESTER 3\PEMROGRAMAN INTERNET\TUGAS_PROGNET\exercise_9_6.php d:\TEKNOLOGI INFORMASI RAVEINA\SEMESTER 3\PEMROGRAMAN INTERNET\TUGAS_PROGNET\exercise_9_7.php
+<?php
+function avgMedian($arr) {
+    sort($arr);
+    $n = count($arr);
+    $avg = array_sum($arr) / $n;
+    $mid = intdiv($n, 2);
+    $median = ($n % 2 == 0)
+        ? ($arr[$mid - 1] + $arr[$mid]) / 2
+        : $arr[$mid];
+    return [$avg, $median];
+}
+
+$data = [5, 3, 9, 1, 7, 4];
+list($avg, $med) = avgMedian($data);
+print "Data     : " . implode(", ", $data) . "<br>";
+print "Rata-rata: $avg <br>";
+print "Median   : $med";
+?>
