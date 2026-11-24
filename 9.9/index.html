@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 9 - Light Bulb Order Form</title>
+</head>
+<body>
+    <h2>Light Bulb Order Form</h2>
+
+    <form action="process_order.php" method="post">
+        <p>
+            <label for="customer_name">Customer Name:</label><br>
+            <input type="text" id="customer_name" name="customer_name" required>
+        </p>
+
+        <fieldset>
+            <legend>Select Light Bulb Packages:</legend>
+            <label>
+                <input type="checkbox" name="bulbs[]" value="Four 25-watt light bulbs ($2.39)">
+                Four 25-watt light bulbs for $2.39
+            </label><br>
+
+            <label>
+                <input type="checkbox" name="bulbs[]" value="Eight 25-watt light bulbs ($4.29)">
+                Eight 25-watt light bulbs for $4.29
+            </label><br>
+
+            <label>
+                <input type="checkbox" name="bulbs[]" value="Four 25-watt long-life light bulbs ($3.95)">
+                Four 25-watt long-life light bulbs for $3.95
+            </label><br>
+
+            <label>
+                <input type="checkbox" name="bulbs[]" value="Eight 25-watt long-life light bulbs ($7.49)">
+                Eight 25-watt long-life light bulbs for $7.49
+            </label>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>Payment Method:</legend>
+            <label>
+                <input type="radio" name="payment_method" value="Visa" required>
+                Visa
+            </label><br>
+
+            <label>
+                <input type="radio" name="payment_method" value="Master Card">
+                Master Card
+            </label><br>
+
+            <label>
+                <input type="radio" name="payment_method" value="Discover">
+                Discover
+            </label>
+        </fieldset>
+        <br>
+
+        <button type="submit">Submit Order</button>
+    </form>
+
+    <br><br><br>
+
+    <a href="../../">Kembali ke Halaman Utama</a>
+</body>
+</html>
