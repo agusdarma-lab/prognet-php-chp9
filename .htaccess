@@ -1,0 +1,10 @@
+# Matikan directory listing, supaya folder tanpa index.html/index.php
+# menghasilkan 403 (bukan menampilkan daftar file)
+Options -Indexes
+
+# Arahkan error 403 dan 404 ke error.php
+# PENTING: path dihitung dari document root (htdocs/www).
+# Kalau project ada di subfolder, misal htdocs/praktikum/,
+# ganti menjadi: /praktikum/error.php
+ErrorDocument 403 /error.php
+ErrorDocument 404 /error.php
