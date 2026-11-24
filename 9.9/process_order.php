@@ -30,7 +30,7 @@ $bulbs = (isset($_POST['bulbs']) && is_array($_POST['bulbs'])) ? $_POST['bulbs']
     <p><strong>Metode Pembayaran:</strong> <?php echo $payment_method; ?></p>
 
     <br>
-    <a href="../">Kembali ke form</a>
+    <a href="index.html">Kembali ke form</a>
 
     <br><br><br>
 
